@@ -21,7 +21,7 @@ from datetime import datetime
 
 spark = SparkSession.builder.getOrCreate()
 
-CATALOG           = "hive_metastore"
+CATALOG           = "main"
 SCHEMA            = "pmjay_audit"
 VECTOR_STORE_PATH = "/tmp/pmjay_audit/vector_store"
 EMBED_MODEL       = "sentence-transformers/all-MiniLM-L6-v2"

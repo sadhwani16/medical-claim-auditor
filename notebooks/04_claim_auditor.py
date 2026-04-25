@@ -28,7 +28,7 @@ from datetime import datetime
 spark = SparkSession.builder.getOrCreate()
 
 # ── Config ────────────────────────────────────────────────────────────────────
-CATALOG           = "hive_metastore"
+CATALOG           = "main"
 SCHEMA            = "pmjay_audit"
 VECTOR_STORE_PATH = "/tmp/pmjay_audit/vector_store"
 FRAUD_THRESHOLD   = 0.55

@@ -20,7 +20,7 @@ import requests
 
 spark = SparkSession.builder.getOrCreate()
 
-CATALOG        = "hive_metastore"
+CATALOG        = "main"
 SCHEMA         = "pmjay_audit"
 
 # ── API Keys ──────────────────────────────────────────────────────────────────
