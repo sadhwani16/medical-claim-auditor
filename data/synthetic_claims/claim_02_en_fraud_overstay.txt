@@ -1,0 +1,47 @@
+DISCHARGE SUMMARY
+=================
+Hospital Name:  Sunrise Superspeciality Hospital, Lucknow
+PM-JAY Empanelment ID: UP-HOS-09912
+Patient Name:   Ramesh Chandra Gupta
+Age / Sex:      52 years / Male
+Ayushman Card:  4421-9901-XXXX
+Admission Date: 05-Mar-2024
+Discharge Date: 12-Mar-2024
+Ward:           Ophthalmology
+
+CHIEF COMPLAINT:
+  Blurring of vision left eye.
+
+DIAGNOSIS:
+  Senile Cataract — Left Eye (ICD-10: H25.9)
+
+PROCEDURE PERFORMED:
+  Phacoemulsification with IOL Implantation — Left Eye
+  Performed on 05-Mar-2024 under local anaesthesia.
+
+CLINICAL NOTES:
+  Routine cataract procedure. No intra-operative complications noted.
+  Post-operative period unremarkable. Vitals stable throughout admission.
+  No documented complications in nursing notes for Days 2 through 7.
+  Patient reportedly preferred to remain admitted due to travel distance.
+
+INVESTIGATION RESULTS:
+  - Biometry: AL = 24.1 mm
+  - All pre-op bloods: Normal
+
+LENGTH OF STAY:  7 days (05-Mar-2024 to 12-Mar-2024)
+
+MEDICATIONS AT DISCHARGE:
+  Moxifloxacin eye drops, Prednisolone eye drops (standard post-op)
+
+CLAIM DETAILS:
+  PM-JAY Package:    H/03 — Cataract Surgery with IOL Implantation
+  Claimed Amount:    ₹10,000 + ₹4,900 bed charges (7 days × ₹700)
+  Total Claimed:     ₹14,900
+  Package Rate:      ₹10,000
+  Attending Surgeon: Dr. Vijay Saxena
+
+NOTE FOR AUDITOR: PM-JAY Package H/03 permits a maximum of 1 day (day-care) for uncomplicated
+cataract surgery. This claim bills for 7 days with no documented clinical justification for
+extended admission. The package rate is ₹10,000 and does not allow supplementary per-diem billing.
+This constitutes Length-of-Stay Manipulation under Section 8.2 of PM-JAY Anti-Fraud Guidelines.

@@ -1,0 +1,46 @@
+DISCHARGE SUMMARY
+=================
+Hospital Name:  Shri Ram Medical Centre, Jaipur
+PM-JAY Empanelment ID: RAJ-HOS-04271
+Patient Name:   Sunita Devi
+Age / Sex:      58 years / Female
+Ayushman Card:  7712-3849-XXXX
+Admission Date: 10-Feb-2024
+Discharge Date: 10-Feb-2024
+Ward:           Ophthalmology Day-Care
+
+CHIEF COMPLAINT:
+  Gradual diminution of vision in right eye for the past 6 months.
+
+DIAGNOSIS:
+  Senile Cataract — Right Eye (ICD-10: H25.9)
+
+PROCEDURE PERFORMED:
+  Phacoemulsification with Posterior Chamber IOL Implantation — Right Eye
+  Foldable acrylic hydrophilic IOL (22.5D) implanted under peribulbar anaesthesia.
+  Operation Theatre Log Reference: OT/2024/0210/047
+
+CLINICAL NOTES:
+  Patient presented with BCVA 6/36 OD. Slit lamp examination confirmed dense nuclear sclerosis.
+  Surgery performed without complications. IOP stable post-op. Patch applied.
+  Post-operative instructions given. Review in 1 week.
+
+INVESTIGATION RESULTS:
+  - Biometry: AL = 23.4 mm, K = 44.5D
+  - Blood Glucose (pre-op): 98 mg/dL
+  - ECG: Normal sinus rhythm
+
+LENGTH OF STAY:  1 day (day-care)
+
+MEDICATIONS AT DISCHARGE:
+  Moxifloxacin 0.5% eye drops — 1 drop QID × 4 weeks
+  Prednisolone Acetate 1% — 1 drop QID × 3 weeks, taper
+  Ketorolac 0.4% — 1 drop TID × 2 weeks
+
+CLAIM DETAILS:
+  PM-JAY Package:    H/03 — Cataract Surgery with IOL Implantation
+  Claimed Amount:    ₹9,500
+  Package Rate:      ₹10,000
+  Attending Surgeon: Dr. Meena Kapoor (Reg. No. MCI-1234567)
+
+DISCHARGE CONDITION: Stable, vision improving.

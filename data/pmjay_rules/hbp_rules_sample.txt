@@ -1,0 +1,198 @@
+PM-JAY HEALTH BENEFIT PACKAGE (HBP) — OFFICIAL RULES EXCERPT
+National Health Authority | Ayushman Bharat PM-JAY
+Version: HBP 2022 (Effective April 2022)
+Source: nha.gov.in
+
+=========================================================
+SECTION 1: GENERAL CONDITIONS FOR ALL CLAIMS
+=========================================================
+
+1.1 All claims must be submitted within 30 days of patient discharge.
+1.2 Each claim must include: Discharge Summary, Lab Reports, Prescription, Consent Form, and Aadhaar verification record.
+1.3 The claimed diagnosis must match the ICD-10 code registered at admission.
+1.4 Any procedure not listed in the HBP is not reimbursable under PM-JAY.
+1.5 A beneficiary can avail treatment up to ₹5 lakh per family per year across all packages.
+1.6 ABUSE / FRAUD WARNING: Upcoding (billing for a higher-cost package than the procedure performed), phantom billing (billing for services not rendered), and length-of-stay manipulation are criminal offences under the Fraud in Healthcare scheme. Penalties include blacklisting and prosecution under IPC Section 420.
+
+=========================================================
+SECTION 2: OPHTHALMOLOGY PACKAGES
+=========================================================
+
+Package H/01 — Pterygium Excision
+  ICD-10 Code: H11.0
+  Package Rate: ₹6,000
+  Maximum Length of Stay: 1 day (day-care procedure)
+  Included: Surgery, local anaesthesia, eye drops for 7 days
+  Excluded: Hospitalisation beyond 1 day is NOT reimbursable
+
+Package H/02 — Squint Correction (Strabismus Surgery)
+  ICD-10 Code: H49, H50
+  Package Rate: ₹8,000
+  Maximum Length of Stay: 1 day
+  Included: Surgery, general/local anaesthesia, post-op review
+  Note: Bilateral same-day squint correction is not permitted under a single package
+
+Package H/03 — Cataract Surgery with IOL Implantation (Phacoemulsification)
+  ICD-10 Code: H26.9, H25.9
+  Package Rate: ₹10,000 per eye
+  Maximum Length of Stay: 1 day (day-care)
+  Included: Phacoemulsification, posterior chamber IOL, post-op eye drops
+  NOT INCLUDED: Bilateral same-sitting surgery NOT permitted under one package
+  FRAUD INDICATOR: Any claim billing more than 1 day stay for uncomplicated cataract surgery must be flagged for review. Claims above ₹12,000 per eye are anomalous.
+  COMPLIANCE NOTE: Foldable IOL implantation is the standard. PMMA lens use requires documented clinical justification.
+
+Package H/04 — Corneal Transplant (Penetrating Keratoplasty)
+  ICD-10 Code: H17, H18
+  Package Rate: ₹35,000
+  Maximum Length of Stay: 5 days
+  Included: Surgery, immunosuppressive medication for 30 days, donor cornea
+  FRAUD INDICATOR: Bills exceeding ₹40,000 or stays beyond 5 days require mandatory audit.
+
+Package H/05 — Vitreoretinal Surgery (Retinal Detachment)
+  ICD-10 Code: H33.0
+  Package Rate: ₹40,000
+  Maximum Length of Stay: 3 days
+  Included: Pars plana vitrectomy or scleral buckle, silicon oil if needed
+
+=========================================================
+SECTION 3: ORTHOPAEDICS PACKAGES
+=========================================================
+
+Package C/10 — Hip Replacement (Unilateral Total Hip Arthroplasty)
+  ICD-10 Code: M16
+  Package Rate: ₹90,000
+  Maximum Length of Stay: 7 days
+  Included: Implant (cemented or uncemented), surgery, 3 days physiotherapy
+  FRAUD INDICATOR: Bilateral hip replacement under single package admission is not permitted.
+
+Package C/11 — Hip Replacement (Bilateral)
+  ICD-10 Code: M16
+  Package Rate: ₹1,40,000
+  Maximum Length of Stay: 10 days
+  Note: Bilateral procedures in same admission are allowed ONLY under this package, not C/10.
+
+Package C/12 — Knee Replacement (Unilateral Total Knee Arthroplasty)
+  ICD-10 Code: M17
+  Package Rate: ₹80,000
+  Maximum Length of Stay: 7 days
+  Included: Implant, surgery, drain, 3 days physiotherapy, anticoagulation
+  FRAUD INDICATOR: Stays exceeding 9 days for uncomplicated knee replacement must be audited.
+
+Package C/13 — Knee Replacement (Bilateral)
+  ICD-10 Code: M17
+  Package Rate: ₹1,25,000
+  Maximum Length of Stay: 10 days
+
+Package C/14 — Spine Surgery — Laminectomy / Discectomy
+  ICD-10 Code: M51.1, G99.2
+  Package Rate: ₹50,000
+  Maximum Length of Stay: 5 days
+  Included: Surgery, one-level decompression; implants are NOT covered under this rate
+
+=========================================================
+SECTION 4: CARDIOLOGY & CARDIOTHORACIC PACKAGES
+=========================================================
+
+Package A/01 — Coronary Artery Bypass Grafting (CABG) — On-pump
+  ICD-10 Code: I25.1
+  Package Rate: ₹1,50,000
+  Maximum Length of Stay: 10 days (including 3 days ICU)
+  Included: Surgery, heart-lung machine, up to 3 grafts, ICU, blood products
+  FRAUD INDICATOR: Billing ICU days beyond Day 3 without documented clinical justification is anomalous. Total stay beyond 12 days must be audited.
+
+Package A/02 — PTCA (Coronary Angioplasty) — Single Vessel
+  ICD-10 Code: I25.1
+  Package Rate: ₹55,000 (bare metal stent); ₹75,000 (DES stent)
+  Maximum Length of Stay: 3 days
+  FRAUD INDICATOR: Multi-vessel PTCA billed under single-vessel package code is upcoding fraud.
+
+Package A/03 — Pacemaker Implantation (Single Chamber)
+  ICD-10 Code: I44
+  Package Rate: ₹45,000 (device NOT included — device cost separate)
+  Maximum Length of Stay: 3 days
+
+Package A/04 — Pacemaker Implantation (Dual Chamber)
+  ICD-10 Code: I44
+  Package Rate: ₹50,000 (device NOT included)
+  Maximum Length of Stay: 3 days
+  Note: Device (pacemaker unit) cost is reimbursed separately at NHA-notified rate.
+
+=========================================================
+SECTION 5: GENERAL SURGERY
+=========================================================
+
+Package D/01 — Appendectomy (Open or Laparoscopic)
+  ICD-10 Code: K37
+  Package Rate: ₹15,000 (open); ₹20,000 (laparoscopic)
+  Maximum Length of Stay: 3 days (open); 2 days (laparoscopic)
+  FRAUD INDICATOR: Appendectomy claims with stay > 4 days without documented complications are anomalous. Complications must be substantiated by lab reports (elevated WBC > 20,000, CT evidence of peritonitis).
+
+Package D/05 — Hernia Repair (Inguinal / Femoral, Unilateral)
+  ICD-10 Code: K40, K41
+  Package Rate: ₹15,000 (open mesh); ₹22,000 (laparoscopic TEP)
+  Maximum Length of Stay: 2 days
+
+Package D/07 — Cholecystectomy (Laparoscopic)
+  ICD-10 Code: K80, K81
+  Package Rate: ₹25,000
+  Maximum Length of Stay: 2 days
+  FRAUD INDICATOR: Open cholecystectomy billed as laparoscopic is upcoding. Port-site images are mandatory evidence.
+
+Package D/12 — Thyroidectomy (Total or Subtotal)
+  ICD-10 Code: E04, E05
+  Package Rate: ₹30,000
+  Maximum Length of Stay: 3 days
+  Included: Surgery, calcium/vitamin D supplementation for 7 days
+
+=========================================================
+SECTION 6: MATERNITY & NEONATAL PACKAGES
+=========================================================
+
+Package M/01 — Normal Vaginal Delivery
+  ICD-10 Code: O80
+  Package Rate: ₹9,000
+  Maximum Length of Stay: 2 days
+  Included: Delivery, newborn care (first 24 hrs), birth certificate
+
+Package M/02 — Caesarean Section
+  ICD-10 Code: O82
+  Package Rate: ₹18,000
+  Maximum Length of Stay: 5 days
+  FRAUD INDICATOR: Caesarean rates above 30% in any empanelled hospital trigger auto-audit. Each C-section must be clinically justified.
+
+Package M/03 — Complicated Delivery (Eclampsia, Placenta Praevia etc.)
+  ICD-10 Code: O14, O44
+  Package Rate: ₹25,000
+  Maximum Length of Stay: 7 days
+  Included: Surgery/delivery, ICU if needed, blood transfusion
+
+=========================================================
+SECTION 7: ONCOLOGY (Selected Packages)
+=========================================================
+
+Package O/01 — Chemotherapy — Day Care (per cycle)
+  ICD-10 Code: C00–C97
+  Package Rate: ₹10,000 per cycle
+  Maximum Length of Stay: 1 day (day-care)
+  Note: Maximum 6 cycles reimbursable per cancer episode unless documented clinical justification provided.
+
+Package O/04 — Mastectomy (Simple / Radical)
+  ICD-10 Code: C50
+  Package Rate: ₹40,000
+  Maximum Length of Stay: 5 days
+
+=========================================================
+SECTION 8: ANTI-FRAUD GUIDELINES
+=========================================================
+
+8.1 UPCODING: Submitting a claim under a higher-value package than the actual procedure performed. E.g., billing laparoscopic cholecystectomy (D/07, ₹25,000) for a patient who only received an OPD consultation. Penalty: blacklisting + full clawback + 2× penalty on amount.
+
+8.2 LENGTH-OF-STAY MANIPULATION: Admitting a patient for longer than medically necessary to inflate per-diem charges. Auditors must verify nursing notes, daily vitals, and attending physician notes match the claimed stay duration.
+
+8.3 PHANTOM PROCEDURES: Billing for procedures that were not performed. Mandatory cross-check: operation theatre log, anaesthesia record, and implant stickers (if applicable) are required for all surgical packages.
+
+8.4 DUPLICATE BILLING: Submitting the same claim to PM-JAY and another insurance scheme (CGHS, ESIS) simultaneously. Real-time Claim Identity Resolver (CIR) checks must be run before payment.
+
+8.5 GHOST PATIENTS: Billing for patients who were not admitted or do not exist. Hospital must provide: Aadhaar-verified e-token, biometric OTP at admission, and discharge biometric confirmation.
+
+8.6 UNNECESSARY PROCEDURES: Performing and billing for procedures that are clinically unjustifiable for the stated diagnosis. E.g., performing a coronary angiography on a 25-year-old admitted for a minor orthopaedic injury with no cardiac risk factors.

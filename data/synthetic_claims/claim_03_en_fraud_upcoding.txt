@@ -1,0 +1,43 @@
+DISCHARGE SUMMARY
+=================
+Hospital Name:  New Horizon Multi-Specialty Hospital, Bhopal
+PM-JAY Empanelment ID: MP-HOS-05543
+Patient Name:   Lakshmi Bai Yadav
+Age / Sex:      34 years / Female
+Ayushman Card:  8834-2210-XXXX
+Admission Date: 18-Jan-2024
+Discharge Date: 19-Jan-2024
+Ward:           General Surgery
+
+CHIEF COMPLAINT:
+  Acute right iliac fossa pain, fever 102°F, nausea for 2 days.
+
+DIAGNOSIS:
+  Acute Appendicitis (ICD-10: K37)
+
+PROCEDURE PERFORMED (AS BILLED):
+  "Laparoscopic Cholecystectomy with Common Bile Duct Exploration"
+  PM-JAY Package D/07 billed — ₹25,000
+
+ACTUAL PROCEDURE (per OT records cross-check):
+  Emergency Open Appendectomy
+  OT log signed by Dr. Patel states: "Emergency appendicectomy, single port."
+  No bile duct exploration performed. No cholecystectomy instruments used.
+
+INVESTIGATION RESULTS:
+  - WBC: 18,400 cells/µL (elevated — consistent with appendicitis)
+  - USG Abdomen: Dilated appendix, no gallstones, normal gallbladder
+  - No ERCP or CBD stone noted on any report
+
+LENGTH OF STAY: 2 days
+
+CLAIM DETAILS:
+  PM-JAY Package BILLED:    D/07 — Laparoscopic Cholecystectomy (₹25,000)
+  CORRECT Package:          D/01 — Open Appendectomy (₹15,000)
+  Overclaim Amount:         ₹10,000
+  Attending Surgeon:        Dr. Ramesh Patel
+
+FRAUD INDICATOR: This is a clear case of upcoding. The OT log confirms an appendectomy was
+performed, yet the hospital billed for a cholecystectomy (a higher-value package). The USG
+confirms no gallbladder pathology. This violates PM-JAY Anti-Fraud Guideline Section 8.1.
+Recommended action: Reject claim, initiate show-cause notice, and refer to State Vigilance Cell.
