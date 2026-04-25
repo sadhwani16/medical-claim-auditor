@@ -23,7 +23,7 @@ spark = SparkSession.builder.getOrCreate()
 
 CATALOG           = "hive_metastore"
 SCHEMA            = "pmjay_audit"
-VECTOR_STORE_PATH = "/dbfs/FileStore/pmjay_audit/vector_store"
+VECTOR_STORE_PATH = "/tmp/pmjay_audit/vector_store"
 EMBED_MODEL       = "sentence-transformers/all-MiniLM-L6-v2"
 
 os.makedirs(VECTOR_STORE_PATH, exist_ok=True)

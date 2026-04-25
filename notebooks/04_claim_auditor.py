@@ -30,7 +30,7 @@ spark = SparkSession.builder.getOrCreate()
 # ── Config ────────────────────────────────────────────────────────────────────
 CATALOG           = "hive_metastore"
 SCHEMA            = "pmjay_audit"
-VECTOR_STORE_PATH = "/dbfs/FileStore/pmjay_audit/vector_store"
+VECTOR_STORE_PATH = "/tmp/pmjay_audit/vector_store"
 FRAUD_THRESHOLD   = 0.55
 
 # ── API Keys — fill in what you have ─────────────────────────────────────────

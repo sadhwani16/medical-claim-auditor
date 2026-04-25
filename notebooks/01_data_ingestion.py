@@ -26,14 +26,17 @@ from datetime import datetime
 
 spark = SparkSession.builder.getOrCreate()
 
-# ── Paths (Community Edition uses FileStore) ──────────────────────────────────
-CLAIMS_DBFS_PATH = "/dbfs/FileStore/pmjay_audit/claims"
-RULES_DBFS_PATH  = "/dbfs/FileStore/pmjay_audit/rules"
+# ── Paths ─────────────────────────────────────────────────────────────────────
+# Rules: all 8 government guideline PDFs uploaded here
+RULES_DBFS_PATH  = "/Workspace/Users/puneetsadhwani16@gmail.com/medical-claim-auditor"
+# Claims: upload your claim PDFs/TXTs into a 'claims' subfolder,
+#         or add them alongside the guidelines above
+CLAIMS_DBFS_PATH = "/Workspace/Users/puneetsadhwani16@gmail.com/medical-claim-auditor/data/synthetic_claims"
 CATALOG          = "hive_metastore"
 SCHEMA           = "pmjay_audit"
 
-os.makedirs(CLAIMS_DBFS_PATH, exist_ok=True)
-os.makedirs(RULES_DBFS_PATH, exist_ok=True)
+# Workspace paths are read-only — no makedirs needed
+os.makedirs("/tmp/pmjay_audit", exist_ok=True)
 
 spark.sql(f"CREATE SCHEMA IF NOT EXISTS {CATALOG}.{SCHEMA}")
 print(f"Schema ready: {CATALOG}.{SCHEMA}")
