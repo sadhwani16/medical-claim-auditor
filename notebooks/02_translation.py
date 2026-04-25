@@ -1,7 +1,8 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC # Notebook 02 — Multilingual Translation (Sarvam AI)
-# MAGIC Read non-English claims from Delta, translate via Sarvam AI, write back.
+# MAGIC # Notebook 02 — Multilingual Translation
+# MAGIC Translates non-English claims (Hindi, Tamil, Telugu, etc.) to English.
+# MAGIC Falls back to Google Translate (free) if no Sarvam key is set.
 
 # COMMAND ----------
 
@@ -9,19 +10,20 @@
 
 # COMMAND ----------
 
-import sys
-sys.path.insert(0, "/Workspace/Repos/your-repo/medical-claim-auditor")  # adjust path
-
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, udf, when, current_timestamp, lit
-from pyspark.sql.types import StructType, StructField, StringType, TimestampType
-import os, requests, re
+from pyspark.sql.types import StringType
+import requests
 
 spark = SparkSession.builder.getOrCreate()
 
-CATALOG  = "hive_metastore"
-SCHEMA   = "pmjay_audit"
-SARVAM_API_KEY = dbutils.secrets.get(scope="pmjay", key="sarvam_api_key")  # noqa
+CATALOG        = "hive_metastore"
+SCHEMA         = "pmjay_audit"
+
+# ── API Keys ──────────────────────────────────────────────────────────────────
+# If you have a Sarvam AI key (free at sarvam.ai), paste it below.
+# Otherwise leave as "" and it will use free Google Translate as fallback.
+SARVAM_API_KEY = ""   # e.g. "your-sarvam-key-here"
 
 SARVAM_LANG_MAP = {
     "hi": "hi-IN", "ta": "ta-IN", "te": "te-IN",
@@ -47,18 +49,20 @@ CREATE TABLE IF NOT EXISTS {CATALOG}.{SCHEMA}.claims_translated (
 
 # COMMAND ----------
 
-# MAGIC %md ## Step 2: UDF for translation
+# MAGIC %md ## Step 2: Translation function
 
 # COMMAND ----------
 
 def translate_text(text: str, src_lang: str) -> str:
-    if src_lang == "en" or src_lang is None:
+    if not text or src_lang == "en" or src_lang is None:
         return text
+
+    # Try Sarvam AI first (better for Indian languages)
     sarvam_code = SARVAM_LANG_MAP.get(src_lang)
     if sarvam_code and SARVAM_API_KEY:
         try:
             chunks = [text[i:i+900] for i in range(0, len(text), 900)]
-            translated_parts = []
+            parts  = []
             for chunk in chunks:
                 resp = requests.post(
                     "https://api.sarvam.ai/translate",
@@ -71,32 +75,31 @@ def translate_text(text: str, src_lang: str) -> str:
                     },
                     timeout=20,
                 )
-                if resp.status_code == 200:
-                    translated_parts.append(resp.json().get("translated_text", chunk))
-                else:
-                    translated_parts.append(chunk)
-            return " ".join(translated_parts)
+                parts.append(resp.json().get("translated_text", chunk) if resp.status_code == 200 else chunk)
+            return " ".join(parts)
         except Exception:
             pass
-    # Fallback: deep-translator
+
+    # Fallback: free Google Translate via deep-translator
     try:
         from deep_translator import GoogleTranslator
-        return GoogleTranslator(source=src_lang, target="en").translate(text)
+        return GoogleTranslator(source=src_lang, target="en").translate(text[:4999])
     except Exception:
         return text
+
 
 translate_udf = udf(translate_text, StringType())
 
 # COMMAND ----------
 
-# MAGIC %md ## Step 3: Translate all non-English claims
+# MAGIC %md ## Step 3: Translate all pending claims
 
 # COMMAND ----------
 
-raw_df = spark.table(f"{CATALOG}.{SCHEMA}.claims_raw")
-already_translated = spark.table(f"{CATALOG}.{SCHEMA}.claims_translated").select("claim_id")
+raw_df            = spark.table(f"{CATALOG}.{SCHEMA}.claims_raw")
+already_done      = spark.table(f"{CATALOG}.{SCHEMA}.claims_translated").select("claim_id")
+pending           = raw_df.join(already_done, on="claim_id", how="left_anti")
 
-pending = raw_df.join(already_translated, on="claim_id", how="left_anti")
 print(f"Claims pending translation: {pending.count()}")
 
 translated_df = (
@@ -106,12 +109,20 @@ translated_df = (
         when(col("detected_language") == "en", col("raw_text"))
         .otherwise(translate_udf(col("raw_text"), col("detected_language")))
     )
-    .withColumn("translation_method",
+    .withColumn(
+        "translation_method",
         when(col("detected_language") == "en", lit("none"))
-        .otherwise(lit("sarvam-ai")))
+        .when(lit(bool(SARVAM_API_KEY)), lit("sarvam-ai"))
+        .otherwise(lit("google-translate"))
+    )
     .withColumn("translated_at", current_timestamp())
-    .select("claim_id", "translated_text", col("detected_language").alias("source_language"),
-            "translation_method", "translated_at")
+    .select(
+        "claim_id",
+        "translated_text",
+        col("detected_language").alias("source_language"),
+        "translation_method",
+        "translated_at",
+    )
 )
 
 translated_df.write.format("delta").mode("append").saveAsTable(f"{CATALOG}.{SCHEMA}.claims_translated")
@@ -124,7 +135,9 @@ print("Translation complete.")
 # COMMAND ----------
 
 spark.sql(f"""
-SELECT c.file_name, c.detected_language, LEFT(c.raw_text, 100) as original, LEFT(t.translated_text, 100) as translated
-FROM {CATALOG}.{SCHEMA}.claims_raw c
-JOIN {CATALOG}.{SCHEMA}.claims_translated t ON c.claim_id = t.claim_id
+  SELECT c.file_name, c.detected_language, t.translation_method,
+         LEFT(c.raw_text, 80) AS original,
+         LEFT(t.translated_text, 80) AS translated
+  FROM {CATALOG}.{SCHEMA}.claims_raw c
+  JOIN {CATALOG}.{SCHEMA}.claims_translated t ON c.claim_id = t.claim_id
 """).show(truncate=False)
