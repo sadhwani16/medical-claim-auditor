@@ -68,13 +68,31 @@ class AuditEngine:
         return result
 
     def _call_llm(self, prompt: str) -> str:
-        if self.provider == "databricks":
+        if self.provider == "sarvam":
+            return self._call_sarvam(prompt)
+        elif self.provider == "databricks":
             return self._call_databricks(prompt)
         elif self.provider == "openai":
             return self._call_openai(prompt)
         elif self.provider == "anthropic":
             return self._call_anthropic(prompt)
         return self._call_mock(prompt)
+
+    def _call_sarvam(self, prompt: str) -> str:
+        import requests
+        resp = requests.post(
+            "https://api.sarvam.ai/v1/chat/completions",
+            headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
+            json={
+                "model": "sarvam-m",
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 800,
+                "temperature": 0.0,
+            },
+            timeout=60,
+        )
+        resp.raise_for_status()
+        return resp.json()["choices"][0]["message"]["content"]
 
     def _call_databricks(self, prompt: str) -> str:
         import requests

@@ -20,7 +20,7 @@ import requests
 
 spark = SparkSession.builder.getOrCreate()
 
-CATALOG        = "main"
+CATALOG        = "workspace"
 SCHEMA         = "pmjay_audit"
 
 # ── API Keys ──────────────────────────────────────────────────────────────────

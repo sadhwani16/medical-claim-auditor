@@ -12,7 +12,8 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install mlflow langchain langchain-community sentence-transformers faiss-cpu requests -q
+# MAGIC %pip install -q --upgrade typing_extensions
+# MAGIC %pip install -q mlflow langchain langchain-community langchain-text-splitters sentence-transformers faiss-cpu requests
 
 # COMMAND ----------
 
@@ -28,9 +29,10 @@ from datetime import datetime
 spark = SparkSession.builder.getOrCreate()
 
 # ── Config ────────────────────────────────────────────────────────────────────
-CATALOG           = "main"
+CATALOG           = "workspace"
 SCHEMA            = "pmjay_audit"
-VECTOR_STORE_PATH = "/tmp/pmjay_audit/vector_store"
+VOLUME            = "files"
+VECTOR_STORE_PATH = f"/Volumes/{CATALOG}/{SCHEMA}/{VOLUME}/vector_store"
 FRAUD_THRESHOLD   = 0.55
 
 # ── API Keys — fill in what you have ─────────────────────────────────────────
@@ -44,7 +46,7 @@ HF_TOKEN = ""         # e.g. "hf_xxxx"
 # Which provider to try first: "sarvam" | "airavata" | "heuristic"
 LLM_PROVIDER = "sarvam" if SARVAM_API_KEY else ("airavata" if HF_TOKEN else "heuristic")
 
-mlflow.set_experiment("/pmjay-audit/claim-auditor")
+mlflow.set_experiment("/Users/puneetsadhwani16@gmail.com/pmjay-claim-auditor")
 
 # COMMAND ----------
 

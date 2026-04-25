@@ -32,7 +32,7 @@ RULES_DBFS_PATH  = "/Workspace/Users/puneetsadhwani16@gmail.com/medical-claim-au
 # Claims: upload your claim PDFs/TXTs into a 'claims' subfolder,
 #         or add them alongside the guidelines above
 CLAIMS_DBFS_PATH = "/Workspace/Users/puneetsadhwani16@gmail.com/medical-claim-auditor/data/synthetic_claims"
-CATALOG          = "main"
+CATALOG          = "workspace"
 SCHEMA           = "pmjay_audit"
 
 # Workspace paths are read-only — no makedirs needed

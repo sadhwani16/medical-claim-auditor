@@ -88,7 +88,7 @@ with st.sidebar:
     st.subheader("⚙️ Configuration")
     llm_provider = st.selectbox(
         "LLM Backend",
-        ["mock (offline demo)", "anthropic", "openai", "databricks"],
+        ["mock (offline demo)", "sarvam", "anthropic", "openai"],
         index=0,
     )
     api_key_input = st.text_input("API Key (if needed)", type="password")

@@ -6,14 +6,14 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install langchain langchain-community sentence-transformers faiss-cpu -q
+# MAGIC %pip install langchain langchain-community langchain-text-splitters sentence-transformers faiss-cpu -q
 
 # COMMAND ----------
 
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, TimestampType
 from pyspark.sql.functions import current_timestamp
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import os, uuid
@@ -21,11 +21,15 @@ from datetime import datetime
 
 spark = SparkSession.builder.getOrCreate()
 
-CATALOG           = "main"
+CATALOG           = "workspace"
 SCHEMA            = "pmjay_audit"
-VECTOR_STORE_PATH = "/tmp/pmjay_audit/vector_store"
+VOLUME            = "files"
+VECTOR_STORE_PATH = f"/Volumes/{CATALOG}/{SCHEMA}/{VOLUME}/vector_store"
 EMBED_MODEL       = "sentence-transformers/all-MiniLM-L6-v2"
 
+# Unity Catalog Volume — persistent storage that works when DBFS is disabled
+spark.sql(f"CREATE VOLUME IF NOT EXISTS {CATALOG}.{SCHEMA}.{VOLUME}")
+import os
 os.makedirs(VECTOR_STORE_PATH, exist_ok=True)
 
 # COMMAND ----------
